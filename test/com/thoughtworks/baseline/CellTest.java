@@ -8,8 +8,15 @@ public class CellTest {
 
     @Test
     public void shouldGiveTheCellStateAsDeadWhenWeGiveTheMinusOperator() {
-        Cell cell=new Cell(0,0,"-");
+        Cell cell = new Cell(0, 0, "-");
 
-        assertEquals("dead",cell.getCellState());
+        assertEquals("dead", cell.getCellState());
+    }
+
+    @Test
+    public void shouldGiveTheCellStateAsLiveWhenWeGiveTheX() {
+        Cell cell = new Cell(0, 0, "X");
+
+        assertEquals("live", cell.getCellState());
     }
 }

@@ -15,6 +15,8 @@ public class Cell {
     }
 
     public String getCellState() {
-        return "dead";
+        if (cellState.equals("-"))
+            return "dead";
+        return "live";
     }
 }
