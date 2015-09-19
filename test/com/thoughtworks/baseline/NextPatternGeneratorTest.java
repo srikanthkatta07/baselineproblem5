@@ -23,4 +23,11 @@ public class NextPatternGeneratorTest {
 
         assertEquals("XX-X-X-X-", outputPattern);
     }
+
+    @Test
+    public void shouldTakeTheInputBlinkPatternAndReturnsOutputPattern() {
+        NextPatternGenerator nextPatternGenerator = new NextPatternGenerator("-X--X--X-");
+
+        String outputPattern = nextPatternGenerator.generateOutputPattern();
+    }
 }
