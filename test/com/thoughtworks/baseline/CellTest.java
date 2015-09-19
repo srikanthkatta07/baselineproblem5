@@ -26,4 +26,12 @@ public class CellTest {
 
         assertEquals(cell, cell);
     }
+
+    @Test
+    public void shouldEqualsAnotherCellWhenBothHaveSameXAndYAndStateValues() {
+        Cell cell = new Cell(0, 0, "X");
+        Cell anotherCell = new Cell(0, 0, "X");
+
+        assertEquals(cell, anotherCell);
+    }
 }

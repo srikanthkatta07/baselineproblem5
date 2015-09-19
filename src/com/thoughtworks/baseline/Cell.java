@@ -19,4 +19,21 @@ public class Cell {
             return "dead";
         return "live";
     }
+
+    @Override
+    public boolean equals(Object that) {
+        Cell thatCell = (Cell) that;
+        if (thatCell.hashCode() == this.hashCode())
+            return true;
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 31 * hash + (int) this.xLocation;
+        hash = 31 * hash + (int) this.yLocation;
+        hash = 31 * hash + (int) this.cellState.hashCode();
+        return hash;
+    }
 }
