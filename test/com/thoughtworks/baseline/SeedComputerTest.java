@@ -6,11 +6,10 @@ import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 
-public class ParserTest {
+public class SeedComputerTest {
 
     @Test
-    public void shouldTakeTheInputBlockPatternFromTheGeneratorAndReturnsTheListOfCells() {
-        Parser parser = new Parser("XXXX",2,2);
+    public void shouldComputesTheEachCellOfBlockPatternAndGeneratesTheOutputCells() {
         ArrayList<Cell> seed = new ArrayList<Cell>();
         Cell firstCell = new Cell(0, 0, "X");
         Cell secondCell = new Cell(0, 1, "X");
@@ -22,6 +21,8 @@ public class ParserTest {
         seed.add(thirdCell);
         seed.add(fourthCell);
 
-        assertEquals(seed, parser.parseInputPattern());
+        SeedComputer seedComputer = new SeedComputer(seed);
+
+        assertEquals(seed, seedComputer.computeTheSeed());
     }
 }
