@@ -34,4 +34,11 @@ public class CellTest {
 
         assertEquals(cell, anotherCell);
     }
+
+    @Test
+    public void shouldGetTheXLocationOfTheGivenCell() {
+        Cell cell = new Cell(2, 3, "X");
+
+        assertEquals(2, cell.getXLocation());
+    }
 }

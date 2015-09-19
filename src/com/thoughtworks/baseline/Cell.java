@@ -36,4 +36,8 @@ public class Cell {
         hash = 31 * hash + (int) this.cellState.hashCode();
         return hash;
     }
+
+    public int getXLocation() {
+        return xLocation;
+    }
 }
