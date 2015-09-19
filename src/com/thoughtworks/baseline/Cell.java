@@ -40,4 +40,8 @@ public class Cell {
     public int getXLocation() {
         return xLocation;
     }
+
+    public int getYLocation() {
+        return yLocation;
+    }
 }
