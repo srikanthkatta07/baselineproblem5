@@ -19,4 +19,11 @@ public class CellTest {
 
         assertEquals("live", cell.getCellState());
     }
+
+    @Test
+    public void shouldEqualsToItSelf() {
+        Cell cell = new Cell(0, 0, "X");
+
+        assertEquals(cell, cell);
+    }
 }
