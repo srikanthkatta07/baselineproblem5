@@ -14,4 +14,13 @@ public class NextPatternGeneratorTest {
 
         assertEquals("XXXX", outputPattern);
     }
+
+    @Test
+    public void shouldTakeTheInputBoatPatternAndReturnsOutputPattern() {
+        NextPatternGenerator nextPatternGenerator = new NextPatternGenerator("XX-X-X-X-");
+
+        String outputPattern = nextPatternGenerator.generateOutputPattern();
+
+        assertEquals("XX-X-X-X-", outputPattern);
+    }
 }
